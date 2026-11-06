@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: gift-parser
+    runtime: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: python parser.py
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: MINIAPP_URL
+        sync: false
+      - key: DATA_DIR
+        value: /data

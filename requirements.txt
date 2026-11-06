@@ -1,0 +1,5 @@
+telethon
+aiogram
+fastapi
+uvicorn[standard]
+pydantic
